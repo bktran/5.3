@@ -9,13 +9,14 @@ namespace _5._3
         {
             //1
             int[] input = { 1, 0, 0, 0, 0, 1 };
-            int n = 2;
-            Console.WriteLine(CanPlantFlowers(input, n));
-
+            Console.WriteLine(CanPlantFlowers(input, 1));
+            Console.WriteLine(CanPlantFlowers(input, 2));
+            Console.WriteLine();
             //2
+            Console.WriteLine(WaysToClimb(2));
+            Console.WriteLine(WaysToClimb(3));
+            Console.WriteLine(WaysToClimb(4));
             Console.WriteLine(WaysToClimb(5));
-
-           
 
         }
 
