@@ -11,6 +11,12 @@ namespace _5._3
             int[] input = { 1, 0, 0, 0, 0, 1 };
             int n = 2;
             Console.WriteLine(CanPlantFlowers(input, n));
+
+            //2
+            Console.WriteLine(WaysToClimb(5));
+
+           
+
         }
 
         public static bool CanPlantFlowers(int[] input, int n)
@@ -36,7 +42,31 @@ namespace _5._3
                 
             }
             return n <= 0;
+        }
+
+        //2
+        static int count = 0;
+        public static int WaysToClimb(int totalSteps)
+        {
+            //base cases
+            //1 step from total = n - 1
+            //2 steps from total = n - 2
+            if (totalSteps < 0)
+            {
+                return 0;
+            }
+            if (totalSteps == 0)
+            {
+                return 1;
+            }
+            if (totalSteps == 1)
+            {
+                return 1;
+            }
+            return WaysToClimb(totalSteps - 1) + WaysToClimb(totalSteps - 2);
 
         }
+
+      
     }
 }
